@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="ua">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Welcome</title>
-	<link rel="stylesheet" href="style/style.css">
-</head>
- <body>
+<?php
+$title = 'Супер блог';
+require 'template/header.php';
+?>
 	<div class="container">
 		<h1 class="title"><?= $isLoggedIn ? 'Адмін панель' : 'Привітання' ?></h1>
 		<?php if($isLoggedIn): ?>
@@ -41,5 +36,4 @@
 
 		<?php endif;?>	
 	</div>
-</body>
-</html>
+<?php require 'template/footer.php' ?>
