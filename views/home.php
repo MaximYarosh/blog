@@ -1,11 +1,12 @@
 <?php
-require __DIR__ . '/../template/header.php';
+$title = 'Супер блог';
+require 'template/header.php';
 ?>
 	<div class="container">
 		<h1 class="title"><?= $isLoggedIn ? 'Адмін панель' : 'Привітання' ?></h1>
 		<?php if($isLoggedIn): ?>
 		<p class="message"><?= $message ?></p>
-		<a href="/blog/logout" class="btn">Вийти</a>
+		<a href="logout.php" class="btn">Вийти</a>
 		<div class="log">
 			<h3 class="log-title">Історія входів:</h3>
 			<?php if(!empty($logItems)): ?>
@@ -23,16 +24,16 @@ require __DIR__ . '/../template/header.php';
 		<?php elseif($isRegistrated): ?>
 		<div class="container">
 			<h2>Вітаємо нового користувача: <?= $name ?> </h2>
-			<p class="message">Будь ласка <a class="btn" href="/blog/log-in">увійдіть</a></p>
+			<p class="message">Будь ласка <a class="btn" href="signed-in.php">увійдіть</a></p>
 		</div>
 
 		<?php else: ?>
 			
 		<div class="container">
 			<h2>Вітаємо на нашому сайті</h2>
-			<p class="message">Будь ласка <a class="btn" href="/blog/log-in">увійдіть</a> або <a class="btn" href="/blog/signed-up">зареєструйтесь</a></p>
+			<p class="message">Будь ласка <a class="btn" href="signed-in.php">увійдіть</a> або <a class="btn" href="signed-up.php">зареєструйтесь</a></p>
 		</div>
 
 		<?php endif;?>	
 	</div>
-<?php require __DIR__ . '/../template/footer.php' ?>
+<?php require 'template/footer.php' ?>
