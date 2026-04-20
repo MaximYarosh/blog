@@ -24,14 +24,14 @@ require 'template/header.php';
 		<?php elseif($isRegistrated): ?>
 		<div class="container">
 			<h2>Вітаємо нового користувача: <?= $name ?> </h2>
-			<p class="message">Будь ласка <a class="btn" href="signed-in.php">увійдіть</a></p>
+			<p class="message">Будь ласка <a class="btn" href="/blog/log-in">увійдіть</a></p>
 		</div>
 
 		<?php else: ?>
 			
 		<div class="container">
 			<h2>Вітаємо на нашому сайті</h2>
-			<p class="message">Будь ласка <a class="btn" href="signed-in.php">увійдіть</a> або <a class="btn" href="signed-up.php">зареєструйтесь</a></p>
+			<p class="message">Будь ласка <a class="btn" href="/blog/log-in">увійдіть</a> або <a class="btn" href="/blog/signed-up">зареєструйтесь</a></p>
 		</div>
 
 		<?php endif;?>	
