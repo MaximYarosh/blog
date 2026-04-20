@@ -22,6 +22,27 @@
 	background: linear-gradient(to bottom, lightcyan, lightgreen, lightgrey, lightseagreen);
 }
 
+.main-navigation ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	max-width: 75%;
+	margin: 0 auto;
+	padding: .5rem;
+}
+
+.main-navigation a {
+	display: inline-block;
+	text-decoration: none;
+	padding: .5em 1.5em;
+}
+
+.main-navigation a:hover {
+	color: black;
+	background-color: antiquewhite;
+	border-radius: 15px;
+}
+
 .fieldset {
 	padding: 1.5em;
 }
@@ -31,11 +52,21 @@
 	margin-bottom: 1rem;
 }
 
+.subtitle {
+	font-size: 1.2rem;
+	margin-bottom: .7rem;
+	color: blue;
+}
+
 .wrapper {
 	width: 75%;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
+}
+
+.column {
+	flex-direction: column;
 }
 
 .form-label {
@@ -52,6 +83,10 @@
 	flex: 2;
 }
 
+.textarea {
+	width: 100%;
+}
+
 .btn {
 	display: inline-block;
 	background: linear-gradient(to right, lightblue, white, lightcyan);
@@ -59,6 +94,7 @@
 	border-radius: 15px;
 	margin-bottom: .8em;
 	cursor: pointer;
+	text-align: center;
 }
 
 .btn:hover {
@@ -101,4 +137,19 @@
 .log-item {
 	padding: 1.3em;
 	margin-bottom: .4em;
+}
+
+.post-list {
+	list-style: none;
+	max-width: 60%;
+}
+
+.post-title {
+	text-align: left;
+	font-size: 1.1rem;
+}
+
+.post-content {
+	text-align: left;
+	font-size: .9rem;
 }

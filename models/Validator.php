@@ -37,4 +37,12 @@ class Validator
 
 		return $errors;
 	}
+
+	public function checkLenght($str) {
+		if(strlen($str) >= 100) {
+			return substr($str, 0, 100) . '...';
+		}
+
+		return $str;
+	}
 }
